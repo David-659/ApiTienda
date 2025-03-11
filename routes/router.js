@@ -11,4 +11,8 @@ router.delete('/productos/:id',controladorProducto.elimimarProductos);
 
 router.get('/registrar',controladorVendedor.register);
 
+router.get("/", (req,res) => {
+    res.render('pages/index')    
+})
+
 module.exports = router;

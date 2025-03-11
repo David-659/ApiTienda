@@ -1,10 +1,11 @@
 const modeloProducto = require('../models/producto.model')
 
 exports.listarProductos = async (req, res) => {
-    let listarProductos = await modeloProducto.find();
-    console.log(listarProductos)
-    if (listarProductos) {
-        res.status(200).json(listarProductos)
+    let listaProductos = await modeloProducto.find();
+    console.log(listaProductos)
+    if (listaProductos) {
+        //res.status(200).json(listaProductos)
+        res.render('pages/index',{listaProductos}) //corregir aqui para que sepa que es productos
     }else {
         res.status(500).json({error})
     }

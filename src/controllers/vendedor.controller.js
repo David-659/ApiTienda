@@ -4,7 +4,7 @@ const modeloVendedor = require('../models/vendedor.model')
 exports.register = async (req,res)=>{
 
     const nuevoUsuario = new modeloUsuario({
-        correo: "davidujuQgmail.com",
+        correo: "daviduj@gmail.com",
         contraseña: "5656gtr56",
         rol: "vendedor"
     });
